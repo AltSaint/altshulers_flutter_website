@@ -1,4 +1,6 @@
+
 import 'package:altshulers_website/components/animated_counter.dart';
+import 'package:altshulers_website/models/glass_card.dart';
 import 'package:altshulers_website/responsive.dart';
 import 'package:flutter/material.dart';
 
@@ -14,85 +16,100 @@ class HighLightsInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(
-          vertical: kDefaultPadding, horizontal: kDefaultPadding),
+        vertical: kDefaultPadding,
+      ),
       child: Responsive.isMobileLarge(context)
-          ? Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    HeighLight(
-                      counter: AnimatedCounter(
-                        value: 119,
-                        text: '+',
+          ? GlassCard(
+              padding: EdgeInsets.all(kDefaultPadding),
+              borderRadius: BorderRadius.circular(20),
+              borderWidth: 1,
+              borderColor: kDefaultBorderColor,
+              color: kCardColor,
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      HeighLight(
+                        counter: AnimatedCounter(
+                          value: 119,
+                          text: '+',
+                        ),
+                        label: 'Subscribers',
                       ),
-                      label: 'Subscribers',
-                    ),
-                    HeighLight(
-                      counter: AnimatedCounter(
-                        value: 119,
-                        text: '+',
+                      HeighLight(
+                        counter: AnimatedCounter(
+                          value: 119,
+                          text: '+',
+                        ),
+                        label: 'Subscribers',
                       ),
-                      label: 'Subscribers',
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: kDefaultPadding,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    HeighLight(
-                      counter: AnimatedCounter(
-                        value: 119,
-                        text: '+',
+                    ],
+                  ),
+                  const SizedBox(
+                    height: kDefaultPadding,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      HeighLight(
+                        counter: AnimatedCounter(
+                          value: 119,
+                          text: '+',
+                        ),
+                        label: 'Subscribers',
                       ),
-                      label: 'Subscribers',
-                    ),
-                    HeighLight(
-                      counter: AnimatedCounter(
-                        value: 119,
-                        text: '+',
+                      HeighLight(
+                        counter: AnimatedCounter(
+                          value: 119,
+                          text: '+',
+                        ),
+                        label: 'Subscribers',
                       ),
-                      label: 'Subscribers',
-                    ),
-                  ],
-                )
-              ],
+                    ],
+                  )
+                ],
+              ),
             )
-          : Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                HeighLight(
-                  counter: AnimatedCounter(
-                    value: 119,
-                    text: '+',
+          : GlassCard(
+              padding: EdgeInsets.all(kDefaultPadding),
+              borderRadius: BorderRadius.circular(20),
+              borderWidth: 1,
+              borderColor: kDefaultBorderColor,
+              color: kCardColor,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  HeighLight(
+                    counter: AnimatedCounter(
+                      value: 119,
+                      text: '+',
+                    ),
+                    label: 'Subscribers',
                   ),
-                  label: 'Subscribers',
-                ),
-                HeighLight(
-                  counter: AnimatedCounter(
-                    value: 119,
-                    text: '+',
+                  HeighLight(
+                    counter: AnimatedCounter(
+                      value: 119,
+                      text: '+',
+                    ),
+                    label: 'Subscribers',
                   ),
-                  label: 'Subscribers',
-                ),
-                HeighLight(
-                  counter: AnimatedCounter(
-                    value: 119,
-                    text: '+',
+                  HeighLight(
+                    counter: AnimatedCounter(
+                      value: 119,
+                      text: '+',
+                    ),
+                    label: 'Subscribers',
                   ),
-                  label: 'Subscribers',
-                ),
-                HeighLight(
-                  counter: AnimatedCounter(
-                    value: 119,
-                    text: '+',
+                  HeighLight(
+                    counter: AnimatedCounter(
+                      value: 119,
+                      text: '+',
+                    ),
+                    label: 'Subscribers',
                   ),
-                  label: 'Subscribers',
-                ),
-              ],
+                ],
+              ),
             ),
     );
   }

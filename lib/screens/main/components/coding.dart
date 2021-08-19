@@ -1,4 +1,5 @@
 import 'package:altshulers_website/components/animated_progress_indicator.dart';
+import 'package:altshulers_website/models/glass_card.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -10,22 +11,38 @@ class Coding extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Divider(),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: kDefaultPadding),
-          child: Text(
-            'Coding',
-            style: Theme.of(context).textTheme.subtitle2,
+    return GlassCard(
+      padding: EdgeInsets.only(
+          left: kDefaultPadding, right: kDefaultPadding, top: kDefaultPadding),
+      borderRadius: BorderRadius.circular(20),
+      borderWidth: 1,
+      borderColor: kDefaultBorderColor,
+      color: kCardColor,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(
+                bottom: kDefaultPadding, top: kDefaultPadding / 2),
+            child: Text(
+              'Coding',
+              style: Theme.of(context).textTheme.subtitle2,
+            ),
           ),
-        ),
-        AnimatedLinearProgressIndicator(percentage: 0.7, label: 'Dart',),
-        AnimatedLinearProgressIndicator(percentage: 0.5, label: 'Bruh',),
-        AnimatedLinearProgressIndicator(percentage: 0.6, label: 'Memes',),
-      ],
+          AnimatedLinearProgressIndicator(
+            percentage: 0.7,
+            label: 'Dart',
+          ),
+          AnimatedLinearProgressIndicator(
+            percentage: 0.5,
+            label: 'Bruh',
+          ),
+          AnimatedLinearProgressIndicator(
+            percentage: 0.6,
+            label: 'Memes',
+          ),
+        ],
+      ),
     );
   }
 }
-

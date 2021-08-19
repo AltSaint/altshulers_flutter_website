@@ -13,7 +13,7 @@ class MyProjects extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
           'My Projects',
@@ -23,7 +23,9 @@ class MyProjects extends StatelessWidget {
           height: kDefaultPadding,
         ),
         Responsive(
-          mobile: ProjectsGridView(crossAxisCount: 1, childAspectRatio: 1.7),
+          mobile: ProjectsGridView(
+            crossAxisCount: 1,
+          ),
           mobileLarge: ProjectsGridView(crossAxisCount: 2),
           tablet: ProjectsGridView(childAspectRatio: 1.1),
           desktop: ProjectsGridView(),

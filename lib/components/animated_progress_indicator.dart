@@ -52,9 +52,9 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
 }
 
 class AnimatedLinearProgressIndicator extends StatelessWidget {
-  const AnimatedLinearProgressIndicator({
-    Key? key, required this.label, required this.percentage
-  }) : super(key: key);
+  const AnimatedLinearProgressIndicator(
+      {Key? key, required this.label, required this.percentage})
+      : super(key: key);
 
   final double percentage;
   final String label;
@@ -62,7 +62,7 @@ class AnimatedLinearProgressIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: kDefaultPadding / 2),
+      padding: const EdgeInsets.only(bottom: kDefaultPadding * 1.5),
       child: TweenAnimationBuilder(
         tween: Tween<double>(begin: 0, end: percentage),
         duration: kDefaultDuration,

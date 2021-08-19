@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
@@ -16,11 +18,20 @@ class HomeBanner extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
-          Image.asset(
-            'assets/images/bg.jpeg',
-            fit: BoxFit.cover,
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('assets/images/bg.jpg'), fit: BoxFit.cover),
+              borderRadius: BorderRadius.circular(20),
+            ),
           ),
-          Container(color: kDarkColor.withOpacity(0.66)),
+          // Container(
+          //   decoration: BoxDecoration(
+          //     color: kDarkColor.withOpacity(0.1),
+          //     borderRadius: BorderRadius.circular(20),
+          //   ),
+          // ),
+
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
             child: Column(
@@ -53,7 +64,7 @@ class HomeBanner extends StatelessWidget {
                         backgroundColor: kPrimaryColor),
                     child: Text(
                       'EXPLORE NOW',
-                      style: TextStyle(color: kDarkColor),
+                      style: TextStyle(color: kBodyTextColor),
                     ),
                   ),
               ],

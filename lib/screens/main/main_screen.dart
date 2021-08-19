@@ -25,39 +25,50 @@ class MainScreen extends StatelessWidget {
                 ),
               ),
             ),
-      drawer: SideMenu(),
-      // body:
-      // Container(
-      //   decoration: BoxDecoration(
-      //     image: DecorationImage(
-      //         image: AssetImage('assets/images/background.jpg'),
-      //         fit: BoxFit.cover),
-      //   ),
-      //   child:
-      body: Center(
-        child: Container(
-          constraints: BoxConstraints(maxWidth: kMaxWidth),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              if (Responsive.isDesktop(context))
+      drawer: (Responsive.isDesktop(context)) ? null : SideMenu(),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/images/background.jpg'),
+              fit: BoxFit.cover),
+        ),
+        child: Center(
+          child: Container(
+            constraints: BoxConstraints(maxWidth: kMaxWidth),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                if (Responsive.isDesktop(context))
+                  Expanded(
+                    flex: 2,
+                    child: Padding(
+                      padding:
+                          const EdgeInsets.symmetric(vertical: kDefaultPadding),
+                      child: SideMenu(),
+                    ),
+                  ),
                 Expanded(
-                  flex: 2,
-                  child: SideMenu(),
-                ),
-              Expanded(
-                flex: 7,
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [...children],
+                  flex: 7,
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: kDefaultPadding,
+                          ),
+                          ...children
+                        ],
+                      ),
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
-      // ),
     );
   }
 }

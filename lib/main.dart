@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: kBackgroundColor,
-        canvasColor: kBackgroundColor,
+        canvasColor: Colors.transparent,
         textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
             .apply(bodyColor: Colors.white)
             .copyWith(
