@@ -17,7 +17,7 @@ class MyProjects extends StatelessWidget {
       children: [
         Text(
           'My Projects',
-          style: Theme.of(context).textTheme.headline6,
+          style: Theme.of(context).textTheme.headline4,
         ),
         const SizedBox(
           height: kDefaultPadding,
@@ -28,7 +28,7 @@ class MyProjects extends StatelessWidget {
           ),
           mobileLarge: ProjectsGridView(crossAxisCount: 2),
           tablet: ProjectsGridView(childAspectRatio: 1.1),
-          desktop: ProjectsGridView(),
+          desktop: ProjectsGridView(childAspectRatio: 2 / 1.6),
         )
       ],
     );

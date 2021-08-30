@@ -50,8 +50,8 @@ class MainScreen extends StatelessWidget {
                 Expanded(
                   flex: 7,
                   child: Padding(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: kDefaultPadding / 2),
                     child: SingleChildScrollView(
                       child: Column(
                         children: [

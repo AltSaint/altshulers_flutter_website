@@ -1,4 +1,3 @@
-
 import 'package:altshulers_website/components/animated_counter.dart';
 import 'package:altshulers_website/models/glass_card.dart';
 import 'package:altshulers_website/responsive.dart';
@@ -32,17 +31,17 @@ class HighLightsInfo extends StatelessWidget {
                     children: [
                       HeighLight(
                         counter: AnimatedCounter(
-                          value: 119,
+                          value: 9,
                           text: '+',
                         ),
-                        label: 'Subscribers',
+                        label: 'Achivement',
                       ),
                       HeighLight(
                         counter: AnimatedCounter(
                           value: 119,
                           text: '+',
                         ),
-                        label: 'Subscribers',
+                        label: 'Achivement',
                       ),
                     ],
                   ),
@@ -54,17 +53,17 @@ class HighLightsInfo extends StatelessWidget {
                     children: [
                       HeighLight(
                         counter: AnimatedCounter(
-                          value: 119,
+                          value: 3,
                           text: '+',
                         ),
-                        label: 'Subscribers',
+                        label: 'Achivement',
                       ),
                       HeighLight(
                         counter: AnimatedCounter(
-                          value: 119,
+                          value: 20,
                           text: '+',
                         ),
-                        label: 'Subscribers',
+                        label: 'Achivement',
                       ),
                     ],
                   )
@@ -82,31 +81,31 @@ class HighLightsInfo extends StatelessWidget {
                 children: [
                   HeighLight(
                     counter: AnimatedCounter(
-                      value: 119,
+                      value: 9,
                       text: '+',
                     ),
-                    label: 'Subscribers',
+                    label: 'Achivement',
                   ),
                   HeighLight(
                     counter: AnimatedCounter(
                       value: 119,
                       text: '+',
                     ),
-                    label: 'Subscribers',
+                    label: 'Achivement',
                   ),
                   HeighLight(
                     counter: AnimatedCounter(
-                      value: 119,
+                      value: 3,
                       text: '+',
                     ),
-                    label: 'Subscribers',
+                    label: 'Achivement',
                   ),
                   HeighLight(
                     counter: AnimatedCounter(
-                      value: 119,
+                      value: 20,
                       text: '+',
                     ),
-                    label: 'Subscribers',
+                    label: 'Achivement',
                   ),
                 ],
               ),

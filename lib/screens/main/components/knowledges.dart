@@ -1,4 +1,3 @@
-
 import 'package:altshulers_website/models/glass_card.dart';
 import 'package:flutter/material.dart';
 import '../../../constants.dart';
@@ -27,14 +26,14 @@ class Knowledges extends StatelessWidget {
             padding: const EdgeInsets.only(
                 bottom: kDefaultPadding / 1.5, top: kDefaultPadding / 2),
             child: Text(
-              'Knowlege',
+              'Knowleges',
               style: Theme.of(context).textTheme.subtitle2,
             ),
           ),
-          KnowledgeText(text: 'Flutter, Dart'),
-          KnowledgeText(text: 'Flutter, Dart'),
-          KnowledgeText(text: 'Flutter, Dart'),
-          KnowledgeText(text: 'Flutter, Dart'),
+          KnowledgeText(text: 'Stateless widget'),
+          KnowledgeText(text: 'Stateful widget'),
+          KnowledgeText(text: 'OOP Basics'),
+          KnowledgeText(text: 'Null Safety'),
         ],
       ),
     );

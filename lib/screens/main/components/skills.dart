@@ -1,4 +1,3 @@
-
 import 'package:altshulers_website/components/animated_progress_indicator.dart';
 import 'package:altshulers_website/models/glass_card.dart';
 import 'package:flutter/material.dart';
@@ -33,22 +32,15 @@ class Skills extends StatelessWidget {
             children: [
               Expanded(
                 child: AnimatedCircularProgressIndicator(
-                  percentage: 0.8,
+                  percentage: 0.6,
                   label: 'Flutter',
                 ),
               ),
               SizedBox(width: kDefaultPadding),
               Expanded(
                 child: AnimatedCircularProgressIndicator(
-                  percentage: 0.72,
-                  label: 'Flutter',
-                ),
-              ),
-              SizedBox(width: kDefaultPadding),
-              Expanded(
-                child: AnimatedCircularProgressIndicator(
-                  percentage: 0.65,
-                  label: 'Flutter',
+                  percentage: 0.5,
+                  label: 'Dart',
                 ),
               ),
             ],

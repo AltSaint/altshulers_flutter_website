@@ -25,21 +25,17 @@ class Coding extends StatelessWidget {
             padding: const EdgeInsets.only(
                 bottom: kDefaultPadding, top: kDefaultPadding / 2),
             child: Text(
-              'Coding',
+              'Instruments',
               style: Theme.of(context).textTheme.subtitle2,
             ),
           ),
           AnimatedLinearProgressIndicator(
-            percentage: 0.7,
-            label: 'Dart',
+            percentage: 0.5,
+            label: 'VS Code',
           ),
           AnimatedLinearProgressIndicator(
             percentage: 0.5,
-            label: 'Bruh',
-          ),
-          AnimatedLinearProgressIndicator(
-            percentage: 0.6,
-            label: 'Memes',
+            label: 'GIT',
           ),
         ],
       ),

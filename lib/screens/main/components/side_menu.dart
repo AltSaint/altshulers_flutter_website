@@ -1,13 +1,14 @@
 import 'dart:ui';
-
+import 'package:url_launcher/url_launcher.dart';
 import 'package:altshulers_website/constants.dart';
+import 'package:altshulers_website/custom_icons.dart';
 import 'package:altshulers_website/models/glass_card.dart';
 import 'package:altshulers_website/screens/main/components/skills.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'area_info_text.dart';
-import 'coding.dart';
+import 'Instruments.dart';
 import 'knowledges.dart';
 import 'my_info.dart';
 
@@ -31,31 +32,64 @@ class SideMenu extends StatelessWidget {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      GlassCard(
-                        padding: EdgeInsets.only(
-                            top: kDefaultPadding,
-                            left: kDefaultPadding,
-                            right: kDefaultPadding,
-                            bottom: kDefaultPadding / 2),
-                        borderRadius: BorderRadius.circular(20),
-                        borderWidth: 1,
-                        borderColor: kDefaultBorderColor,
-                        color: kCardColor,
-                        child: Column(
-                          children: [
-                            AreaInfoText(
-                              title: 'Residence',
-                              text: 'Ukraine',
-                            ),
-                            AreaInfoText(
-                              title: 'City',
-                              text: 'Kyiv',
-                            ),
-                            AreaInfoText(
-                              title: 'Age',
-                              text: '21',
-                            ),
-                          ],
+                      Container(
+                        width: MediaQuery.of(context).size.width,
+                        child: GlassCard(
+                          padding: EdgeInsets.only(
+                              top: kDefaultPadding,
+                              left: kDefaultPadding,
+                              right: kDefaultPadding,
+                              bottom: kDefaultPadding / 2),
+                          borderRadius: BorderRadius.circular(20),
+                          borderWidth: 1,
+                          borderColor: kDefaultBorderColor,
+                          color: kCardColor,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              AreaInfoText(
+                                title: 'Country',
+                                text: 'Ukraine',
+                              ),
+                              AreaInfoText(
+                                title: 'City',
+                                text: 'Kyiv',
+                              ),
+                              AreaInfoText(
+                                title: 'Age',
+                                text: '20',
+                              ),
+                              GestureDetector(
+                                onTap: () async {
+                                  await canLaunch("tel:+38 050 135 9497")
+                                      ? await launch("tel:+38 050 135 9497")
+                                      : throw 'Could not launch "tel:+38 050 135 9497"';
+                                },
+                                child: AreaInfoText(
+                                  title: 'Phone Number',
+                                  text: '050 135 9497',
+                                ),
+                              ),
+                              GestureDetector(
+                                onTap: () async {
+                                  await canLaunch(
+                                          "mailto:altshuleryehor@gmail.com")
+                                      ? await launch(
+                                          "mailto:altshuleryehor@gmail.com")
+                                      : throw 'Could not launch "mailto:altshuleryehor@gmail.com"';
+                                },
+                                child: AreaInfoText(
+                                  title: 'Email',
+                                  text: 'altshuleryehor@gmail.com',
+                                ),
+                              ),
+                              AreaInfoText(
+                                title: 'Langueges',
+                                text:
+                                    'Russian - Native, English - Intermediate',
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       SizedBox(height: kDefaultPadding / 2),
@@ -88,7 +122,7 @@ class SideMenu extends StatelessWidget {
                                 SizedBox(width: kDefaultPadding / 2),
                                 SvgPicture.asset(
                                   'assets/icons/download.svg',
-                                  color: kPrimaryColor,
+                                  color: Colors.white,
                                 ),
                               ],
                             ),
@@ -107,31 +141,51 @@ class SideMenu extends StatelessWidget {
                           children: [
                             Spacer(),
                             IconButton(
-                              onPressed: () {},
-                              icon: SvgPicture.asset(
-                                'assets/icons/linkedin.svg',
-                                color: kPrimaryColor,
+                              hoverColor: Colors.blue,
+                              onPressed: () async {
+                                await canLaunch("https://t.me/yehoraltshuler")
+                                    ? await launch(
+                                        "https://t.me/yehoraltshuler")
+                                    : throw 'Could not launch "https://t.me/yehoraltshuler"';
+                              },
+                              icon: Icon(
+                                CustomIcons.telegram_plane,
                               ),
                             ),
                             IconButton(
-                              onPressed: () {},
-                              icon: SvgPicture.asset(
-                                'assets/icons/github.svg',
-                                color: kPrimaryColor,
+                              hoverColor: Color(0xFF171515),
+                              onPressed: () async {
+                                await canLaunch("https://github.com/AltSaint")
+                                    ? await launch(
+                                        "https://github.com/AltSaint")
+                                    : throw 'Could not launch "https://github.com/AltSaint"';
+                              },
+                              icon: Icon(
+                                CustomIcons.github,
                               ),
                             ),
                             IconButton(
-                              onPressed: () {},
-                              icon: SvgPicture.asset(
-                                'assets/icons/twitter.svg',
-                                color: kPrimaryColor,
+                              hoverColor: Color(0xFFC13584),
+                              onPressed: () async {
+                                await canLaunch(
+                                        "https://instagram.com/yehoraltshuler")
+                                    ? await launch(
+                                        "https://instagram.com/yehoraltshuler")
+                                    : throw 'Could not launch "https://instagram.com/yehoraltshuler"';
+                              },
+                              icon: Icon(
+                                CustomIcons.instagram,
                               ),
                             ),
                             IconButton(
-                              onPressed: () {},
-                              icon: SvgPicture.asset(
-                                'assets/icons/behance.svg',
-                                color: kPrimaryColor,
+                              hoverColor: Color(0xFF25D366),
+                              onPressed: () async {
+                                await canLaunch("https://wa.me/380501359497")
+                                    ? await launch("https://wa.me/380501359497")
+                                    : throw 'Could not launch "https://wa.me/380501359497"';
+                              },
+                              icon: Icon(
+                                CustomIcons.whatsapp,
                               ),
                             ),
                             Spacer(),

@@ -1,4 +1,3 @@
-
 import 'package:altshulers_website/models/Project.dart';
 import 'package:altshulers_website/models/glass_card.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +32,7 @@ class ProjectCard extends StatelessWidget {
             Text(
               project.title!,
               maxLines: 2,
-              style: Theme.of(context).textTheme.subtitle2,
+              style: Theme.of(context).textTheme.headline6,
               overflow: TextOverflow.ellipsis,
             ),
             Spacer(),
@@ -45,7 +44,11 @@ class ProjectCard extends StatelessWidget {
             ),
             Spacer(),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                final Project myProject = this.project;
+                Navigator.of(context)
+                    .pushNamed('/project_info', arguments: myProject);
+              },
               child: GlassCard(
                 padding: EdgeInsets.symmetric(
                     vertical: kDefaultPadding / 2, horizontal: kDefaultPadding),

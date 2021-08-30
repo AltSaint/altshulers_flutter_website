@@ -14,7 +14,7 @@ class HomeBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: Responsive.isMobile(context) ? 2.5 : 3,
+      aspectRatio: Responsive.isMobile(context) ? 1 : 3,
       child: Stack(
         fit: StackFit.expand,
         children: [
@@ -54,19 +54,6 @@ class HomeBanner extends StatelessWidget {
                   const SizedBox(height: kDefaultPadding / 2),
                 MyBuildAnimatedText(),
                 SizedBox(height: kDefaultPadding),
-                if (!Responsive.isMobileLarge(context))
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: kDefaultPadding * 2,
-                            vertical: kDefaultPadding),
-                        backgroundColor: kPrimaryColor),
-                    child: Text(
-                      'EXPLORE NOW',
-                      style: TextStyle(color: kBodyTextColor),
-                    ),
-                  ),
               ],
             ),
           )
@@ -91,7 +78,6 @@ class MyBuildAnimatedText extends StatelessWidget {
           if (!Responsive.isMobileLarge(context)) FluterCodedText(),
           if (!Responsive.isMobileLarge(context))
             SizedBox(width: kDefaultPadding / 2),
-          Text('I build '),
           Responsive.isMobile(context)
               ? Expanded(child: AnimatedText())
               : AnimatedText(),
@@ -112,13 +98,15 @@ class AnimatedText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedTextKit(
+      repeatForever: true,
+      pause: Duration(seconds: 2),
       animatedTexts: [
-        TyperAnimatedText('responsive web and mobile app.',
-            speed: Duration(milliseconds: 60)),
-        TyperAnimatedText('complete e-Comerce app UI',
-            speed: Duration(milliseconds: 60)),
-        TyperAnimatedText('chat app with dark and light theme',
-            speed: Duration(milliseconds: 60)),
+        TypewriterAnimatedText("'Insert some pretentious text here'",
+            speed: Duration(milliseconds: 100)),
+        TypewriterAnimatedText("'Insert other some pretentious text here'",
+            speed: Duration(milliseconds: 100)),
+        TypewriterAnimatedText("'Insert other some pretentious text here'",
+            speed: Duration(milliseconds: 100)),
       ],
     );
   }

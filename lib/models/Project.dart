@@ -1,38 +1,45 @@
 class Project {
-  final String? title, description;
+  final String? title, description, image, note, features, githubLink, androidLink;
 
-  Project({this.title, this.description});
+  Project({
+    this.title,
+    this.description,
+    this.image,
+    this.note,
+    this.features,
+    this.githubLink,
+    this.androidLink
+  });
 }
 
 List<Project> demoProjects = [
   Project(
-    title: "Responsive Admin Panel or Dashboard - Flutter UI",
-    description:
-        "On Flutter V2.* web officially supported on a stable branch. Today I share an Admin panel or you can call it dashboard UI build with flutter. Now you can build your app dashboard using flutter. This dashboard contains almost everything that you need like a chart, table, nice small card for showing info.",
-  ),
+    githubLink: 'https://github.com/AltSaint/tic_tac_toe',
+      image: 'assets/images/xo_phone.png',
+      title: "Tic-Tac-Toe",
+      description:
+          "A game in which two players seek in alternate turns to complete a row, a column, or a diagonal with either three O's or three X's drawn in the spaces of a grid of nine squares; noughts and crosses.",
+      note: 'Only for 2 players!',
+      features: '''- Retro gaming style
+
+      - Some feature
+
+      - Some feature
+
+      - Some feature'''),
   Project(
-    title: "E-Commerce Complate App - Flutter UI",
-    description:
-        "In the first part of our complete e-commerce app, we show you how you can create a nice clean onboarding screen for your e-commerce app that can run both Andriod and iOS devices because it builds with flutter. Then on the second episode, we build a Sign in, Forgot Password screen with a custom error indicator.",
-  ),
-  Project(
-    title: "Outlook Email App Redesign - Flutter Fully Responsive Design UI",
-    description:
-        "We redesign the outlook app also make it responsive so that you can run it everywhere on your phone, tab, or web. In this flutter responsive video, we will show you the real power of flutter. Make mobile, web, and desktop app from a single codebase.",
-  ),
-  Project(
-    title: "Chat/Messaging App Light and Dark Theme - Flutter UI",
-    description:
-        "Today we gonna build messing/chat app #ui using #flutter that runs both Android and iOS devices also has a dark and light theme. We create in total 4 screens all of that support both Dark Theme and Light Theme. At first, we design a welcome screen that contains an image with a tag line also has a skip button.",
-  ),
-  Project(
-    title: "Welcome page, Login Page and Sign up page - Flutter UI",
-    description:
-        "In the first part of our complete e-commerce app, we show you how you can create a nice clean onboarding screen for your e-commerce app that can run both Andriod and iOS devices because it builds with flutter. Then on the second episode, we build a Sign in, Forgot Password screen with a custom error indicator.",
-  ),
-  Project(
-    title: "Covid-19 App - Flutter UI",
-    description:
-        "We redesign the outlook app also make it responsive so that you can run it everywhere on your phone, tab, or web. In this flutter responsive video, we will show you the real power of flutter. Make mobile, web, and desktop app from a single codebase.",
-  ),
+    githubLink: 'https://github.com/AltSaint/bmi_calculator',
+      image: 'assets/images/bmi_phone.png',
+      title: "BMI Calculator",
+      description:
+          "With this BMI Calculator you can calculate and evaluate your Body Mass Index (BMI) based on the relevant information on body weight, height, age and sex. Check your body stats to find your ideal weight, because overweight and obesity are risk factors for diseases such as hypertension, heart disease and diabetes. It can also be used to find your healthy weight if you want to lose weight or are on diet.",
+      note:
+          'This app is only demonstration purposes, DO NOT use it for medical purposes!',
+      features: '''- Glassmorphic design
+
+      - Some feature
+
+      - Some feature
+      
+      - Some feature'''),
 ];
