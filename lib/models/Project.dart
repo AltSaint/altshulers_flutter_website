@@ -14,6 +14,7 @@ class Project {
 
 List<Project> demoProjects = [
   Project(
+    androidLink: 'https://drive.google.com/file/d/1SEwztoxhaJaA1iiMox6vry6suurrzPNF/view?usp=sharing',
     githubLink: 'https://github.com/AltSaint/tic_tac_toe',
       image: 'assets/images/xo_phone.png',
       title: "Tic-Tac-Toe",
@@ -28,6 +29,7 @@ List<Project> demoProjects = [
 
       - Some feature'''),
   Project(
+    androidLink: 'https://drive.google.com/file/d/1VwkLGBaz13TChsbYJ2YYuhLUbSZ12elb/view?usp=sharing',
     githubLink: 'https://github.com/AltSaint/bmi_calculator',
       image: 'assets/images/bmi_phone.png',
       title: "BMI Calculator",

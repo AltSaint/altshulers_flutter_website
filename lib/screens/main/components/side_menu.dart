@@ -6,7 +6,6 @@ import 'package:altshulers_website/models/glass_card.dart';
 import 'package:altshulers_website/screens/main/components/skills.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import 'area_info_text.dart';
 import 'Instruments.dart';
 import 'knowledges.dart';
@@ -107,7 +106,11 @@ class SideMenu extends StatelessWidget {
                         borderColor: kDefaultBorderColor,
                         color: kCardColor,
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () async {
+    await canLaunch('https://drive.google.com/file/d/1el-jpQN-hshEGtiX9DIIbCt7Qp5rSeTb/view?usp=sharing')
+        ? await launch('https://drive.google.com/file/d/1el-jpQN-hshEGtiX9DIIbCt7Qp5rSeTb/view?usp=sharing')
+        : throw 'Could not launch "https://drive.google.com/file/d/1el-jpQN-hshEGtiX9DIIbCt7Qp5rSeTb/view?usp=sharing"';
+  },
                           child: FittedBox(
                             child: Row(
                               children: [

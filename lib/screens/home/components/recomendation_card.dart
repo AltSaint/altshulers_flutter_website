@@ -1,6 +1,5 @@
 import 'package:altshulers_website/models/Recomendation.dart';
 import 'package:altshulers_website/models/glass_card.dart';
-import 'package:altshulers_website/responsive.dart';
 
 import 'package:flutter/material.dart';
 
